@@ -11,6 +11,7 @@ import Checkout from "./Checkout";
 import TripList from "./components/TripList";
 import Wishlist from "./components/Wishlist";
 import tripsReducer from "./components/tripsReducer";
+import RootFile from "./components/RootFile";
 
 export default function App() {
   const [wishlist, dispatch] = useReducer(tripsReducer, []);
@@ -22,9 +23,7 @@ export default function App() {
           <Routes>
             <Route
               path="/"
-              element={
-                <h1>Welcome to Business Trips Int. useReducer & routing v6</h1>
-              }
+              element={<RootFile/>}
             />
             <Route path="/:category" element={<Products />} />
             <Route path="/:category/:id" element={<Detail />} />
