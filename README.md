@@ -19,4 +19,9 @@ Dejan, Gian und Edgar werden heute weiterhin am Frontend arbeiten. Stephan wird 
 Heute hat Stephan mit einer In-Memory Datenbank die benötigten Backend APIs erstellt und ins Backend-Repository gepusht. Dejan und Gian können nun ihre Entwürfe mit dem Backend verbinden.  
 Stephan möchte nun das Backend mit einer echten Datenbank verbessern.
 Dejan und Gian können jetzt die paths /wishlists und /trips mit den von Stephan erstellten Endpoints verbinden. Rest-Services Get, Post, Delete, Patch...
-Edgar fangt heute an mit dem Design der Frontends. 
+Edgar fangt heute mit dem Design der Frontends an. 
+### 14.06.2024
+Stephan entschied sich die Datenbankanbindung vom letzten Mal auf halt zu setzten. Er beschäftigt sich heute indem er versucht das Backend in mehrere Dateien aufzuteilen. Das ist eine Schwierigkeit im Sinne, dass Vercel Serverlose Funktionen anwendet. Hatte schon Erfolg mit JSON files. 
+Dejan arbeitet weiterhin an den API und Pathways.  
+Gian informiert sich zu dem erstellen des Dockerfiles und versucht unsere Applikation in zwei Images umzuwandeln, welche er dann auf Docker Hub postet. 
+Edgar arbeitet weiterhin am design und unterstützt Gian bei der Docker aufsetzung. 
