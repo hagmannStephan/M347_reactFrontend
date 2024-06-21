@@ -24,9 +24,24 @@ body {
 }
 
 header {
-  display: flex;
-  padding-left: 20px;
+  width: 100%;
 }
+
+nav ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  width: 100%;
+}
+
+.lastLink {
+  margin-left: auto; /* Ensures this element is aligned to the right */
+}
+
+
 
 header img {
   max-height: 100px;
