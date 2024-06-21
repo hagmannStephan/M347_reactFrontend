@@ -1,23 +1,26 @@
-# pull official base image
-FROM node:18.12.1-alpine
-# add a bash shell to the image
-RUN apk add --no-cache bash
-# set working directory
+# Verwenden Sie ein offizielles Node.js-Runtime-Image als Basis
+FROM node:14
+
+# Setzen Sie das Arbeitsverzeichnis im Container
 WORKDIR /app
 
-# add `/app/node_modules/.bin` to $PATH
-ENV PATH /app/node_modules/.bin:$PATH
-RUN echo "Path: $PATH"
-# install app dependencies
-COPY package.json ./
-#COPY package-lock.json ./
-#RUN npm install --silent
-#RUN npm install react-scripts@5.0.1 -g --silent
-RUN yarn
-# add All to app
-COPY . ./
+# Kopieren Sie die package.json und yarn.lock Dateien
+COPY package*.json ./
 
-# start app
-# CMD ["npm", "start"]
-# Best-Practice with ENTRYPOINT!
-ENTRYPOINT ["yarn", "start"]
+# Installieren Sie die Abhängigkeiten
+RUN npm install
+
+# Kopieren Sie den Rest des Anwendungscodes
+COPY . .
+
+# Bauen Sie das React-Projekt
+RUN npm run build
+
+# Installieren Sie ein einfaches HTTP-Server-Paket
+RUN npm install -g serve
+
+# Exponieren Sie den Port, auf dem die App läuft
+EXPOSE 5000
+
+# Startbefehl für die Anwendung
+CMD ["serve", "-s", "build"]
