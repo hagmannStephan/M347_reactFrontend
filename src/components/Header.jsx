@@ -12,28 +12,11 @@ export default function Header() {
         <ul>
           <li>
             <Link to="/">
-              <img alt="BBW Fitness" src="/images/logo.png" />
+              <img src="/images/businessLogo.png" alt="Business Logo" />
             </Link>
           </li>
-          {/*<li>
-            <NavLink activeStyle={activeStyle} to="/boards">
-              Boards
-            </NavLink>
-          </li>
           <li>
-            <NavLink activeStyle={activeStyle} to="/cart">
-              Cart
-            </NavLink>
-          </li>*/}
-          <li>
-            <NavLink activeStyle={activeStyle} to="/trips">
-              Trips
-            </NavLink>
-          </li>
-          <li>
-            <NavLink activeStyle={activeStyle} to="/wishlist">
-              Wishlist
-            </NavLink>
+            <div className="lastLink">DE | <b>EN</b></div><div className="lastLink">Login</div>
           </li>
         </ul>
       </nav>
