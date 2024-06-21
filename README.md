@@ -32,3 +32,5 @@ Dejan hat heute seinen Teil des Frontends fertiggestellt. Mit der Änderung, die
 Gian hat einen Workflow zum Front- und Backend hinzugefügt, der bei jedem neuen Merge auf den Main ein File im Workflow auslöst. 
 Diese Datei erstellt ein Docker Image und veröffentlicht es auf dem Docker Hub. Nun arbeitet er daran, dass das neue Image automatisch aufzusetzen... Dann ist die Pipeline fertig. 
 Edgar hat seinen Teil des Frontends fertiggestellt. Nun mergt er seinen Teil ein und stellt sicher, dass die anderen Teile des Frontends zusammen koheränt funktionieren. 
+
+Stephan konnte Schlussendlich die Vercel Datenbankänderungen nicht vervollständigen, da es in der Dokumentation falsche Angaben gab. 
