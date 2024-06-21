@@ -24,4 +24,11 @@ Edgar fangt heute mit dem Design der Frontends an.
 Stephan entschied sich die Datenbankanbindung vom letzten Mal auf halt zu setzten. Er beschäftigt sich heute indem er versucht das Backend in mehrere Dateien aufzuteilen. Das ist eine Schwierigkeit im Sinne, dass Vercel Serverlose Funktionen anwendet. Hatte schon Erfolg mit JSON files. 
 Dejan arbeitet weiterhin an den API und Pathways.  
 Gian informiert sich zu dem erstellen des Dockerfiles und versucht unsere Applikation in zwei Images umzuwandeln, welche er dann auf Docker Hub postet. 
-Edgar arbeitet weiterhin am design und unterstützt Gian bei der Docker aufsetzung. 
+Edgar arbeitet weiterhin am design und unterstützt Gian bei der Docker aufsetzung.
+### 21.06.2024
+Der Main Branch wurde protected. Das bedeutet, dass niemand mehr direkt auf den Main pushen kann. So werden unnötige Fehler vermieden. Nun muss jeder seinen eigenen Branch erstellen, diesen mergen und auf Stephan's Genehmigung warten.
+Stephan kümmert sich heute noch um das Backend und dessen API-Verbindung zur Datenbank. Der GET Rest Service funktioniert. Die anderen Dienste noch nicht.  
+Dejan hat heute seinen Teil des Frontends fertiggestellt. Mit der Änderung, die den Main Branch schützt, hat er wieder Probleme mit seinem GitHub. Stephan und Edgar helfen ihm, damit das Frontend endlich zusammenkommen kann.
+Gian hat einen Workflow zum Front- und Backend hinzugefügt, der bei jedem neuen Merge auf den Main ein File im Workflow auslöst. 
+Diese Datei erstellt ein Docker Image und veröffentlicht es auf dem Docker Hub. Nun arbeitet er daran, dass das neue Image automatisch aufzusetzen... Dann ist die Pipeline fertig. 
+Edgar hat seinen Teil des Frontends fertiggestellt. Nun mergt er seinen Teil ein und stellt sicher, dass die anderen Teile des Frontends zusammen koheränt funktionieren. 
