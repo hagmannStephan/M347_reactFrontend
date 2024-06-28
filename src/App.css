@@ -12,6 +12,11 @@ body {
   background-color: #fff;
 }
 
+.description {
+  width: 40rem;
+  margin-top: 2rem;
+}
+
 #root {
   display: flex;
   flex-direction: column;
@@ -24,6 +29,20 @@ body {
 }
 
 header {
+  text-align: center;
+  color: black;
+  padding: 20px 2rem 0 2rem;
+  flex-shrink: 0;
+  /* background-color: #e2ffff; */
+}
+
+.sideBySide {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0;
+  margin: 0;
+  list-style: none;
   width: 100%;
 }
 
@@ -37,11 +56,18 @@ nav ul {
   width: 100%;
 }
 
+.notBlue {
+  color: black;
+}
+
+.tableT th,
+.tableT td{
+  padding-left: 0.5rem;
+}
+
 .lastLink {
   margin-left: auto; /* Ensures this element is aligned to the right */
 }
-
-
 
 header img {
   max-height: 100px;

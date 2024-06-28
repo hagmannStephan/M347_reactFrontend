@@ -25,7 +25,7 @@ function TripList({ dispatch }) {
         <div className="row">
           <table className="tripsTable">
             <thead className="tripsTablehead">
-              <tr>
+              <tr className="tableT">
                 <th>Title</th>
                 <th>Employees</th>
                 <th>Description</th>
@@ -33,7 +33,7 @@ function TripList({ dispatch }) {
             </thead>
             <tbody>
               {trips.map(item => (
-                <tr className="tripsTablebody" key={item.idBusinessTrip}>
+                <tr className="tripsTablebody tableT" key={item.idBusinessTrip}>
                   <td>{item.title}</td>
                   <td>{item.employees}</td>
                   <td>{item.description}</td>
