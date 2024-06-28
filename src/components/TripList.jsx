@@ -34,7 +34,7 @@ function TripList({ dispatch }) {
             <tbody>
               {trips.map(item => (
                 <tr className="tripsTablebody" key={item.idBusinessTrip}>
-                  <td>{item.title}</td>
+                  <td>{item.des}</td>
                   <td>{item.employees}</td>
                   <td>{item.description}</td>
                 </tr>
