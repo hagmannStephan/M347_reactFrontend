@@ -5,7 +5,7 @@ export async function getBusinessTrips() {
 }
 export async function getWishlistItems() {
   // fetch wishlists from api
-  const response = await fetch("http://localhost:8080/v1/trips");
+  const response = await fetch("https://m347backendapi-hagmannstephans-projects.vercel.app/flights");
   if (response.ok) return response.json();
   throw response;
 }
