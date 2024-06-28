@@ -34,3 +34,9 @@ Diese Datei erstellt ein Docker Image und veröffentlicht es auf dem Docker Hub.
 Edgar hat seinen Teil des Frontends fertiggestellt. Nun mergt er seinen Teil ein und stellt sicher, dass die anderen Teile des Frontends zusammen koheränt funktionieren. 
 
 Stephan konnte Schlussendlich die Vercel Datenbankänderungen nicht vervollständigen, da es in der Dokumentation falsche Angaben gab. 
+### 28.06.2024
+Das Projekt ist im Wesentlichen abgeschlossen. Kleinere Verbesserungen und Refactoring sind jetzt an der Reihe. Edgar arbeitet an Verbesserungen des Frontends. Stephan am Backend. Die Tasks und Issues werden dann doppelt geprüft. 
+Gian schreibt die Testfälle der Pipeline und übernimmt den größten Teil des Projekts. Edgar übernimmt für ihn den Teil des Frontends. 
+Dejan beendet seinen Teil des Frontends. Er hat noch Probleme mit seinem Github... Aber das sollte bis zum Ende des Tages behoben sein.
+
+Das Projekt kann heute beendet werden. 
