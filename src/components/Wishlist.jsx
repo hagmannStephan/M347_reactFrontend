@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from "react";
-import "bootstrap/dist/css/bootstrap.min.css";
-import { getWishlistItems } from "./tripsService.js";
+/* eslint-disable react/prop-types */
+import React from "react";
+import "./Wishlist.css";
 
 function WishList({ dispatch }) {
   const [wishlist, setWishlist] = useState([]);
