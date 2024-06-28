@@ -17,8 +17,8 @@ export default function App() {
   const [wishlist, dispatch] = useReducer(tripsReducer, []);
   return (
     <>
+      <Header />
       <div className="content">
-        <Header />
         <main>
           <Routes>
             <Route
