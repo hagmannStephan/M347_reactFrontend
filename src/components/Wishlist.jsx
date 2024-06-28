@@ -1,16 +1,21 @@
-import React from "react";
+import React, { useEffect } from "react";
+import axios from "axios";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { getFlights, deleteFlight } from "./api";
 
 export default function Wishlist(props) {
   const { wishlist, dispatch } = props;
 
   useEffect(() => {
-    const fetchData = async () => {
-      const data = await getFlights();
-      dispatch({ type: "load", payload: data });
+    const fetchFlights = async () => {
+      try {
+        const response = await axios.get("http://localhost:5000/flights"); // Anpassen der URL entsprechend deiner Flask-Server-Konfiguration
+        dispatch({ type: "load", payload: response.data });
+      } catch (error) {
+        console.error("Error fetching flights:", error);
+        // Optional: Fehlerbehandlung hier einfügen
+      }
     };
-    fetchData();
+    fetchFlights();
   }, [dispatch]);
 
   const itemsMapped = wishlist.map((item, index) => (
@@ -19,68 +24,61 @@ export default function Wishlist(props) {
 
   const empty = (
     <tr>
-      <td colSpan="4">
-        {" "}
-        <p className="alert alert-info">Wishlist of Businesstrips is empty</p>
+      <td colSpan="5">
+        <p className="alert alert-info">Wishlist of Business trips is empty</p>
       </td>
     </tr>
   );
 
   return (
     <div className="container">
-      <React.Fragment>
-        <div className="row">
-          <div className="col-sm-12">
-            <div className="card table-responsive">
-              <table className="table table-hover shopping-cart-wrap">
-                <thead className="text-muted">
-                  <tr>
-                    <th scope="col">Trip</th>
-                    <th scope="col" width="200">
-                      Title
-                    </th>
-                    <th scope="col" width="200">
-                      Like
-                    </th>
-                    <th scope="col" width="120">
-                      Description
-                    </th>
-                    <th scope="col" width="200" className="text-right">
-                      Action
-                    </th>
-                  </tr>
-                </thead>
-                <tbody>{itemsMapped.length > 0 ? itemsMapped : empty}</tbody>
-                <tfoot>
-                  <tr>
-                    <th align="right" scope="col" />
-                    <th scope="col" />
-                    <th scope="col" />
-                    <th scope="col">
-                      <button
-                        className="btn btn-outline-danger"
-                        onClick={() => dispatch({ type: "empty" })}
-                        disabled={itemsMapped.length === 0}
-                      >
-                        empty List
-                      </button>
-                    </th>
-                  </tr>
-                </tfoot>
-              </table>
-            </div>
+      <div className="row">
+        <div className="col-sm-12">
+          <div className="card table-responsive">
+            <table className="table table-hover shopping-cart-wrap">
+              <thead className="text-muted">
+                <tr>
+                  <th scope="col">Trip</th>
+                  <th scope="col" width="200">
+                    Title
+                  </th>
+                  <th scope="col" width="200">
+                    Like
+                  </th>
+                  <th scope="col" width="120">
+                    Description
+                  </th>
+                  <th scope="col" width="200" className="text-right">
+                    Action
+                  </th>
+                </tr>
+              </thead>
+              <tbody>{itemsMapped.length > 0 ? itemsMapped : empty}</tbody>
+              <tfoot>
+                <tr>
+                  <th align="right" scope="col" colSpan="4" />
+                  <th scope="col">
+                    <button
+                      className="btn btn-outline-danger"
+                      onClick={() => dispatch({ type: "empty" })}
+                      disabled={itemsMapped.length === 0}
+                    >
+                      empty List
+                    </button>
+                  </th>
+                </tr>
+              </tfoot>
+            </table>
           </div>
         </div>
-      </React.Fragment>
+      </div>
     </div>
   );
 }
 
 function Wish(props) {
-  // deconstruct props
   const { dispatch } = props;
-  // props
-  let { id, title, description, startTrip, endTrip } = props.item;
+  const { id, title, description, startTrip, endTrip } = props.item;
 
   return (
     <tr key={id}>
@@ -114,35 +112,16 @@ function Wish(props) {
       <td>
         <span className="media-body">
           <div>
-            <button /*className="btn btn-outline-success fa fa-heart fa-xs"*/ />
+            {/* Placeholder für Like-Button */}
+            <button className="btn btn-outline-success fa fa-heart fa-xs" />
           </div>
         </span>
       </td>
-      {/* <input
-            className="col-sm-7"
-            type="number"
-            value={quantity}
-            onChange={(e) => {
-              dispatch({
-                type: "updateQuantity",
-                sku,
-                quantity: e.target.value,
-              });
-            }}
-          /> */}
-      {/* <a href="#." className="btn btn-primary">
-            <i
-              value={quantity}
-              onChange={(e) => updateQuantity(sku, quantity++)}
-              className="fa fa-cart-plus"
-            />
-          </a> */}
-
       <td className="price-wrap price">{description}</td>
       <td className="text-right">
         <button
           className="btn btn-outline-danger"
-          onClick={() => dispatch({ type: "deleteItem", id: props.item.id })} // App deleteItem
+          onClick={() => dispatch({ type: "deleteItem", id: props.item.id })}
         >
           delete Trip
         </button>
