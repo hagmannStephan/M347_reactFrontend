@@ -1,22 +1,16 @@
-/* eslint-disable react/prop-types */
 import React, { useState, useEffect } from "react";
-
 import { getBusinessTrips } from "./tripsService.js";
 
-// functional component TripList, deconstruct props!
 function TripList({ dispatch }) {
-  // State
   const [trips, setTrips] = useState([]);
 
-  // componentDidMount .. didUpdate etc.
   useEffect(() => {
-    // fetch products from api
     getBusinessTrips().then((response) => setTrips(response));
   }, []);
 
-  const tripsMapped = trips.map((trip, index) => (
-    <Trip dispatch={dispatch} trip={trip} key={trip.id} />
-  ));
+  // const tripsMapped = trips.map((trip, index) => (
+  //   <Trip dispatch={dispatch} trip={trip} key={trip.id} />
+  // ));
 
   const empty = (
     <section>
@@ -29,15 +23,18 @@ function TripList({ dispatch }) {
       <section>
         <h4 className="h4">Business Trips - Planned 2021</h4>
         <div className="row">
-          {tripsMapped.length > 0 ? tripsMapped : empty}
+          <ul>
+            {trips.map(item => (
+              <li key={item.id}>{item.title}</li>
+            ))}
+          </ul>
         </div>
       </section>
     </div>
   );
 }
-// deconstruct ...props
+
 function Trip({ dispatch, trip }) {
-  // Props
   let { id, title, description, startTrip, endTrip } = trip;
 
   return (
