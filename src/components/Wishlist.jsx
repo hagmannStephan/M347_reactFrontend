@@ -1,78 +1,70 @@
 /* eslint-disable react/prop-types */
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-// deconstruct props
+import "./Wishlist.css";
+
 export default function Wishlist(props) {
   const { wishlist, dispatch } = props;
-  // as constant variant 2
+
   const itemsMapped = wishlist.map((item, index) => (
     <Wish dispatch={dispatch} item={item} key={index} />
   ));
 
   const empty = (
     <tr>
-      <td colSpan="4">
-        {" "}
-        <p className="alert alert-info">Wishlist of Businesstrips is empty</p>
+      <td colSpan="5">
+        <p className="alert alert-info text-center">Wishlist of Business Trips is empty</p>
       </td>
     </tr>
   );
 
+  
   return (
-    <div className="container">
-      <React.Fragment>
-        <div className="row">
-          <div className="col-sm-12">
-            <div className="card table-responsive">
-              <table className="table table-hover shopping-cart-wrap">
-                <thead className="text-muted">
+    <div className="container mt-5">
+      <div className="row">
+        <div className="col-sm-12">
+          <div className="card">
+            <div className="card-header bg-primary text-white">
+              <h4 className="mb-0">Business Trip Wishlist</h4>
+            </div>
+            <div className="card-body table-responsive p-0">
+              <table className="table table-hover table-bordered mb-0">
+                <thead className="thead-dark">
                   <tr>
                     <th scope="col">Trip</th>
-                    <th scope="col" width="200">
-                      Title
-                    </th>
-                    <th scope="col" width="200">
-                      Like
-                    </th>
-                    <th scope="col" width="120">
-                      Description
-                    </th>
-                    <th scope="col" width="200" className="text-right">
-                      Action
-                    </th>
+                    <th scope="col" width="200">Title</th>
+                    <th scope="col" width="200">Like</th>
+                    <th scope="col" width="250">Description</th>
+                    <th scope="col" width="150" className="text-right">Action</th>
                   </tr>
                 </thead>
                 <tbody>{itemsMapped.length > 0 ? itemsMapped : empty}</tbody>
                 <tfoot>
                   <tr>
-                    <th align="right" scope="col" />
-                    <th scope="col" />
-                    <th scope="col" />
-                    <th scope="col">
+                    <td colSpan="5" className="text-right">
                       <button
                         className="btn btn-outline-danger"
                         onClick={() => dispatch({ type: "empty" })}
                         disabled={itemsMapped.length === 0}
                       >
-                        empty List
+                        Empty List
                       </button>
-                    </th>
+                    </td>
                   </tr>
                 </tfoot>
               </table>
             </div>
           </div>
         </div>
-      </React.Fragment>
+      </div>
     </div>
   );
 }
 
+
 function Wish(props) {
-  // deconstruct props
   const { dispatch } = props;
-  // props
-  let { id, title, description, startTrip, endTrip } = props.item;
+  const { id, title, description, startTrip, endTrip } = props.item;
 
   return (
     <tr key={id}>
@@ -80,9 +72,9 @@ function Wish(props) {
         <figure className="media">
           <div className="img-wrap">
             <img
-              className="img-thumbnail img-xs"
+              className="img-thumbnail img-sm"
               src={"images/items/" + id + ".jpg"}
-              alt="img"
+              alt="Trip"
             />
           </div>
           <figcaption className="media-body">
@@ -90,8 +82,6 @@ function Wish(props) {
             <dl className="dlist-inline small">
               <dt>Start: </dt>
               <dd>{startTrip}</dd>
-            </dl>
-            <dl className="dlist-inline small">
               <dt>End: </dt>
               <dd>{endTrip}</dd>
             </dl>
@@ -103,40 +93,18 @@ function Wish(props) {
           <div>{title}</div>
         </span>
       </td>
-      <td>
-        <span className="media-body">
-          <div>
-            <button /*className="btn btn-outline-success fa fa-heart fa-xs"*/ />
-          </div>
-        </span>
+      <td className="text-center">
+        <button className="btn btn-outline-success">
+          <i className="fa fa-heart"></i>
+        </button>
       </td>
-      {/* <input
-            className="col-sm-7"
-            type="number"
-            value={quantity}
-            onChange={(e) => {
-              dispatch({
-                type: "updateQuantity",
-                sku,
-                quantity: e.target.value,
-              });
-            }}
-          /> */}
-      {/* <a href="#." className="btn btn-primary">
-            <i
-              value={quantity}
-              onChange={(e) => updateQuantity(sku, quantity++)}
-              className="fa fa-cart-plus"
-            />
-          </a> */}
-
-      <td className="price-wrap price">{description}</td>
+      <td className="text-wrap">{description}</td>
       <td className="text-right">
         <button
           className="btn btn-outline-danger"
-          onClick={() => dispatch({ type: "deleteItem", id: props.item.id })} // App deleteItem
+          onClick={() => dispatch({ type: "deleteItem", id: props.item.id })}
         >
-          delete Trip
+          Delete Trip
         </button>
       </td>
     </tr>

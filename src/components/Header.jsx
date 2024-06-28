@@ -11,29 +11,20 @@ export default function Header() {
       <nav>
         <ul>
           <li>
-            <Link to="/">
-              <img alt="BBW Fitness" src="/images/logo.png" />
-            </Link>
-          </li>
-          {/*<li>
-            <NavLink activeStyle={activeStyle} to="/boards">
-              Boards
-            </NavLink>
+            <div className="sideBySide">
+              <Link to="/">
+                <img src="/images/businessLogo.png" alt="Business Logo" />
+              </Link>
+              <div style={{ marginLeft: '2rem'}}><b>Buisness Trips and Wishlist!</b></div>
+            </div>
           </li>
           <li>
-            <NavLink activeStyle={activeStyle} to="/cart">
-              Cart
-            </NavLink>
-          </li>*/}
-          <li>
-            <NavLink activeStyle={activeStyle} to="/trips">
-              Trips
-            </NavLink>
-          </li>
-          <li>
-            <NavLink activeStyle={activeStyle} to="/wishlist">
-              Wishlist
-            </NavLink>
+            <div className="sideBySide">
+              <Link to="/trips" className="notBlue"><div style={{ marginRight: '2rem'}}>Trips</div></Link> 
+              <Link to="/wishlist" className="notBlue"><div style={{ marginRight: '2rem'}}>Wishlist</div></Link>
+              <div style={{ marginRight: '2rem'}} className="lastLink">DE | <b>EN</b></div>
+              <div className="lastLink">Login</div>    
+            </div>
           </li>
         </ul>
       </nav>

@@ -1,5 +1,5 @@
 export async function getBusinessTrips() {
-  const response = await fetch("http://localhost:8080/v1/trips");
+  const response = await fetch("https://m347backendapi-hagmannstephans-projects.vercel.app/businessTrips");
   if (response.ok) return response.json();
   throw response;
 }
