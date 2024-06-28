@@ -9,6 +9,6 @@ test("renders welcome message", () => {
       <App />
     </MemoryRouter>
   );
-  const welcomeMessage = screen.getByText(/Welcome to Business Trips Int. useReducer & routing v6/i);
+  const welcomeMessage = screen.getByText(/Business Trips and Wishlist!/i);
   expect(welcomeMessage).toBeInTheDocument();
 });
