@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { getBusinessTrips } from "./tripsService.js";
+import "./Wishlist.css";
 
 function TripList({ dispatch }) {
   const [trips, setTrips] = useState([]);

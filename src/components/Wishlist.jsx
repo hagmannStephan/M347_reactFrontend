@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { getWishlistItems } from "./tripsService.js";
+import "./Wishlist.css";
 
 function WishList({ dispatch }) {
   const [wishlist, setWishlist] = useState([]);
