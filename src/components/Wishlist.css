@@ -1,10 +1,31 @@
-
 .container {
     margin-top: 2rem;
   }
+
+.row {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.tripsTable {
+  border: 1px solid lightblue;
+}
+
+.tripsTablehead {
+  height: 2.5rem;
+}
+
+.tripsTablebody {
+  height: 2rem;
+  background-color: #d2ffff;
+}
+
+.tripsTablebody:nth-child(even) {
+  background-color: #f2ffff; 
+}
   
   .card-header {
-    background-color: #d2ffff;
+    background-color: #e7fcfc;
     color: white;
   }
   
