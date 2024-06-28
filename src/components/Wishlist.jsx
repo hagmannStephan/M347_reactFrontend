@@ -8,11 +8,10 @@ export default function Wishlist(props) {
   useEffect(() => {
     const fetchFlights = async () => {
       try {
-        const response = await axios.get("http://localhost:5000/flights"); // Anpassen der URL entsprechend deiner Flask-Server-Konfiguration
+        const response = await axios.get("https://m347backendapi-hagmannstephans-projects.vercel.app/flights"); 
         dispatch({ type: "load", payload: response.data });
       } catch (error) {
         console.error("Error fetching flights:", error);
-        // Optional: Fehlerbehandlung hier einfügen
       }
     };
     fetchFlights();
