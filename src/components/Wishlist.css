@@ -75,4 +75,59 @@
       font-size: 0.8rem;
     }
   }
+
+/*  */
   
+.container {
+  margin: 20px auto;
+  max-width: 800px;
+  padding: 20px;
+  background: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+ 
+.h4 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+  font-family: 'Arial', sans-serif;
+}
+ 
+.wishlistTable {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+ 
+.wishlistTable th, .wishlistTable td {
+  padding: 10px;
+  text-align: left;
+}
+ 
+.wishlistsTablehead th {
+  background-color: #007bff;
+  color: white;
+}
+ 
+.wishlistTablebody td {
+  border-bottom: 1px solid #ddd;
+}
+ 
+.wishlistTablebody:nth-child(even) {
+  background-color: #f2f2f2;
+}
+ 
+.alert {
+  padding: 10px;
+  background-color: #d1ecf1;
+  color: #0c5460;
+  border: 1px solid #bee5eb;
+  border-radius: 4px;
+  text-align: center;
+}
+ 
+.row {
+  display: flex;
+  justify-content: center;
+}

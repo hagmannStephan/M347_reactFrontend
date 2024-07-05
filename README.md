@@ -38,5 +38,20 @@ Stephan konnte Schlussendlich die Vercel Datenbankänderungen nicht vervollstän
 Das Projekt ist im Wesentlichen abgeschlossen. Kleinere Verbesserungen und Refactoring sind jetzt an der Reihe. Edgar arbeitet an Verbesserungen des Frontends. Stephan am Backend. Die Tasks und Issues werden dann doppelt geprüft. 
 Gian schreibt die Testfälle der Pipeline und übernimmt den größten Teil des Projekts. Edgar übernimmt für ihn den Teil des Frontends. 
 Dejan beendet seinen Teil des Frontends. Er hat noch Probleme mit seinem Github... Aber das sollte bis zum Ende des Tages behoben sein.
-
 Das Projekt kann heute beendet werden. 
+
+### 05.07.2024 — Letze Woche
+Das Projekt wird heute beendet. Der letzte Commit und Merge wird diese Änderung der ReadMe Datei sein. 
+#### Sprint review
+Grundsätzlich ging das Projekt mühelos und unproblematisch vorbei. Wir hatten keinerlei Zeitdruck. Das aufteilen der Aufgaben musste angepasst werden, aber das war Unvorhersehbar. Wir haben aber adaptiert.
+
+Der Product Owner ist sehr zufrieden mit dem Produkt. Das Backend gefällt ihm besonders. Er meinte, der Type der das Backend gecoded hat sollte eine Lohnerhöhung bekommen... Aus einer unvoreingenommene Perspektive sollte man aber unter Berücksichtigung, dass das Backend keine Datenbank hat. Klar war das die Schuld der Vercel Dokumentation. Genauer, deren Fehlen. 
+
+Zum Frontend hatte der Product Owner auch ein paar Worte. Dass einige Buttons keine verlinkung haben (Instagram, Facebook, Login) oder das wir eine Deutsche Version scheinbar offerieren, darauf aber kein Zugriff zur verfügung steht, findet er besonders Interessant. Das ist aber die Schuld des Budgets des Kundes.
+#### Verbesserungsvorschläge
+Beim Deployen von Docker-Hub auf digital ocean würden Kosten anfallen. Aus diesem Grund
+haben wir die Schritte für das deploymend dokumentiert, aber nicht ausgeführt. 
+Es würde aber funktionieren, da die gesammte Pipeline funktioniert. 
+
+Die Datenbankverbindung zum Backend ist nicht geschehen. Das war unvorhersehbar. Wir sollten vor dem beginn des Projektes die Zeit genommen haben, uns mit Vercel genauer familiär zu machen.
+
