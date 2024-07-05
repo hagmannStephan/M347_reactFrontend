@@ -1,4 +1,4 @@
-# M346 + M426 Abschlussprojekt
+# M346 + M426 Abschlussprojekt von Edgar, Stephan, Dejan und Gian
 Das Projekt besteht aus folgenden Repositories:
 - https://github.com/hagmannStephan/m347_backend_api (Deployed as https://m347backend-fid1eypgt-hagmannstephans-projects.vercel.app/)
 - https://github.com/hagmannStephan/M347_reactFrontend (Deployed as https://m347-react-frontend-8cjs54yqc-hagmannstephans-projects.vercel.app/)
