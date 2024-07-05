@@ -1,9 +1,5 @@
 import React from "react";
-import { Link, NavLink } from "react-router-dom";
-
-const activeStyle = {
-  color: "purple",
-};
+import { Link } from "react-router-dom";
 
 export default function Header() {
   return (
