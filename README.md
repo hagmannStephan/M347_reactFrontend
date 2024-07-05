@@ -53,5 +53,5 @@ Beim Deployen von Docker-Hub auf digital ocean würden Kosten anfallen. Aus dies
 haben wir die Schritte für das deploymend dokumentiert, aber nicht ausgeführt. 
 Es würde aber funktionieren, da die gesammte Pipeline funktioniert. 
 
-Die Datenbankverbindung zum Backend ist nicht geschehen. Das war unvorhersehbar. Wir sollten vor dem beginn des Projektes die Zeit genommen haben, uns mit Vercel genauer familiär zu machen.
+Die Datenbankverbindung zum Backend ist nicht geschehen. Das war unvorhersehbar. Wir sollten vor dem beginn des Projektes die Zeit genommen haben, uns mit Vercel genauer familiär zu machen. 
 
